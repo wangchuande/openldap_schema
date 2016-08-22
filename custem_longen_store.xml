@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "template.dtd">
+
+<template>
+<askcontainer>1</askcontainer>
+<description>Longen Store</description>
+<icon>ldap-user.png</icon>
+<invalid>0</invalid>
+<rdn>cn</rdn>
+<!-- <regexp>^ou=.*,</regexp> -->
+<title>Longen Store</title>
+<visible>1</visible>
+
+<objectClasses>
+<objectClass id="device"></objectClass>
+<objectClass id="shoppingStore"></objectClass>
+</objectClasses>
+
+<attributes>
+
+<attribute id="storeName">
+	<display>storeName</display>
+	<order>2</order>
+	<spacer>1</spacer>
+</attribute>
+
+<attribute id="storeNick">
+	<display>storeNick</display>
+	<order>3</order>
+	<spacer>1</spacer>
+</attribute>
+
+<attribute id="sellerId">
+	<display>sellerId</display>
+	<order>4</order>
+	<spacer>1</spacer>
+</attribute>
+
+<attribute id="sellerNick">
+	<display>sellerNick</display>
+	<order>5</order>
+	<spacer>1</spacer>
+</attribute>
+
+</attributes>
+
+</template>
+

@@ -12,8 +12,8 @@
 <visible>1</visible>
 
 <objectClasses>
-<objectClass id="samplePerson"></objectClass>
 <objectClass id="employedPerson"></objectClass>
+<objectClass id="rolePersion"></objectClass>
 </objectClasses>
 
 <attributes>
@@ -22,44 +22,87 @@
 	<order>1</order>
 	<spacer>1</spacer>
 </attribute>
-<attribute id="idCard">
-	<display>idCard</display>
+<attribute id="sn">
+	<display>姓名</display>
 	<order>2</order>
 	<spacer>1</spacer>
 </attribute>
-<attribute id="role">
-	<display>Role</display>
+<attribute id="displayName">
+	<display>昵称</display>
 	<order>3</order>
 	<spacer>1</spacer>
 </attribute>
-<attribute id="entryDate">
-	<display>entryDate</display>
+<attribute id="jpegPhoto">
+	<display>头像</display>
 	<order>4</order>
 	<spacer>1</spacer>
 </attribute>
-<attribute id="telephoneNumber">
-	<display>telephoneNumber</display>
-	<icon>phone.png</icon>
+<attribute id="englishName">
+	<display>英文名</display>
 	<order>5</order>
+	<spacer>1</spacer>
 </attribute>
-<attribute id="mail">
-	<display>Email</display>
+<attribute id="idCard">
+	<display>身份证</display>
 	<order>6</order>
-	<page>1</page>
+	<spacer>1</spacer>
 </attribute>
-<attribute id="manager">
-	<display>Manager</display>
+<attribute id="gender">
+	<display>性别</display>
 	<order>7</order>
 	<spacer>1</spacer>
 </attribute>
+<attribute id="education">
+	<display>学历</display>
+	<order>7</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="telephoneNumber">
+	<display>电话</display>
+	<icon>phone.png</icon>
+	<order>8</order>
+</attribute>
+<attribute id="mail">
+	<display>邮箱</display>
+	<order>9</order>
+	<page>1</page>
+</attribute>
+<attribute id="manager">
+	<display>部门经理</display>
+	<order>10</order>
+	<spacer>1</spacer>
+</attribute>
 <attribute id="userPassword">
-        <display>Password</display>
+        <display>密码</display>
         <icon>ldap-default.png</icon>
-        <order>7</order>
+        <order>11</order>
         <spacer>1</spacer>
 </attribute>
-
+<attribute id="role">
+	<display>角色</display>
+	<order>12</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="entryDate">
+	<display>入职日期</display>
+	<order>13</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="birthDate">
+	<display>出生日期</display>
+	<order>13</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="status">
+	<display>在职状态</display>
+	<order>14</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="dimissionDate">
+	<display>离职日期</display>
+	<order>14</order>
+	<spacer>1</spacer>
+</attribute>
 </attributes>
-
 </template>
 

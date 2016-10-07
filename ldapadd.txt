@@ -1,0 +1,41 @@
+slaptest -f test.conf -F testdir
+
+The resulting file will be testdir/cn=config/cn=schema/cn={0}test.ldif and will look something like this:
+
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 ed5d248b
+dn: cn={0}test
+objectClass: olcSchemaConfig
+cn: {0}test
+olcAttributeTypes: {0}( 1.3.6.1.4.1.42.2.27.4.1.6 NAME 'javaClassName' DESC 'F
+ ully qualified name of distinguished Java class or interface' EQUALITY caseEx
+ actMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcObjectClasses: {0}( 1.3.6.1.4.1.42.2.27.4.2.1 NAME 'javaContainer' DESC 'Co
+ ntainer for a Java object' SUP top STRUCTURAL MUST cn )
+structuralObjectClass: olcSchemaConfig
+entryUUID: 1cf25098-2f16-1031-9bb3-07590c97897d
+creatorsName: cn=config
+createTimestamp: 20120510180255Z
+entryCSN: 20120510180255.489367Z#000000#000#000000
+modifiersName: cn=config
+modifyTimestamp: 20120510180255Z
+
+
+Edit this file as shown below and save it as, say, test.ldif or whatever name takes your fancy:
+
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 ed5d248b
+# lines in green have been edited, delete lines in red
+dn: cn=test,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: test
+olcAttributeTypes: {0}( 1.3.6.1.4.1.42.2.27.4.1.6 NAME 'javaClassName' DESC 'F
+ ully qualified name of distinguished Java class or interface' EQUALITY caseEx
+ actMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcObjectClasses: {0}( 1.3.6.1.4.1.42.2.27.4.2.1 NAME 'javaContainer' DESC 'Co
+ ntainer for a Java object' SUP top STRUCTURAL MUST cn )
+
+sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{3\}employedperson.ldif 
+sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{4\}onlinestore.ldif  
+sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{5\}roleperson.ldif 
+                              

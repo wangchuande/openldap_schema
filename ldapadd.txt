@@ -38,4 +38,6 @@ olcObjectClasses: {0}( 1.3.6.1.4.1.42.2.27.4.2.1 NAME 'javaContainer' DESC 'Co
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{3\}employedperson.ldif 
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{4\}onlinestore.ldif  
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{5\}roleperson.ldif 
+查询：
+sudo ldapsearch -H ldapi:// -Y EXTERNAL -b "cn=config" -LLL -Q dn
                               

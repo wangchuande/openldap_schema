@@ -108,6 +108,11 @@
 	<order>15</order>
 	<spacer>1</spacer>
 </attribute>
+<attribute id="job">
+	<display>职位</display>
+	<order>16</order>
+	<spacer>1</spacer>
+</attribute>
 </attributes>
 </template>
 

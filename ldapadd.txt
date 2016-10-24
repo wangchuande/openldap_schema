@@ -35,9 +35,31 @@ olcAttributeTypes: {0}( 1.3.6.1.4.1.42.2.27.4.1.6 NAME 'javaClassName' DESC 'F
 olcObjectClasses: {0}( 1.3.6.1.4.1.42.2.27.4.2.1 NAME 'javaContainer' DESC 'Co
  ntainer for a Java object' SUP top STRUCTURAL MUST cn )
 
+添加schema:
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{3\}employedperson.ldif 
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{4\}onlinestore.ldif  
 sudo ldapadd -Y EXTERNAL -H ldapi:/// -f cn\=\{5\}roleperson.ldif 
 查询：
 sudo ldapsearch -H ldapi:// -Y EXTERNAL -b "cn=config" -LLL -Q dn
+
+
+
+
+添加新属性：
+version: 1
+
+dn: cn={4}employedperson,cn=schema,cn=config
+changetype: modify
+add: olcAttributeTypes
+olcAttributeTypes:  ( 
+        2.25.128424792425578037463837247958458780603.30
+        NAME 'job'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 
+ )
+
+sudo ldapmodify -Q -Y EXTERNAL -H ldapi://  -f test.ldif
+
+
                               

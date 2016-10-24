@@ -13,7 +13,7 @@
 
 <objectClasses>
 <objectClass id="employedPerson"></objectClass>
-<objectClass id="rolePersion"></objectClass>
+<objectClass id="roleAndGroup"></objectClass>
 </objectClasses>
 
 <attributes>
@@ -78,7 +78,7 @@
         <order>11</order>
         <spacer>1</spacer>
 </attribute>
-<attribute id="role">
+<attribute id="roleLongen">
 	<display>角色</display>
 	<order>12</order>
 	<spacer>1</spacer>
@@ -103,6 +103,12 @@
 	<order>14</order>
 	<spacer>1</spacer>
 </attribute>
+<attribute id="groupLongen">
+	<display>分组</display>
+	<order>15</order>
+	<spacer>1</spacer>
+</attribute>
 </attributes>
 </template>
+
 

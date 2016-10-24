@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE template SYSTEM "template.dtd">
+
+<template>
+<askcontainer>1</askcontainer>
+<description>Longen Group</description>
+<icon>ldap-user.png</icon>
+<invalid>0</invalid>
+<rdn>cn</rdn>
+<!-- <regexp>^ou=.*,</regexp> -->
+<title>Longen Group</title>
+<visible>1</visible>
+
+<objectClasses>
+<objectClass id="establishedGroup"></objectClass>
+</objectClasses>
+
+<attributes>
+<attribute id="cn">
+	<display>CN</display>
+	<order>1</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="sn">
+	<display>组名</display>
+	<order>2</order>
+	<spacer>1</spacer>
+</attribute>
+<attribute id="managerOfGroup">
+	<display>主管</display>
+	<order>3</order>
+	<spacer>1</spacer>
+</attribute>
+</attributes>
+</template>
+
